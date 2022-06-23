@@ -1,0 +1,23 @@
+{
+  "name": "Sibomana_CV",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w asset/scss -o asset/css "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evrardsibo/Sibomana_CV.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evrardsibo/Sibomana_CV/issues"
+  },
+  "homepage": "https://github.com/evrardsibo/Sibomana_CV#readme",
+  "dependencies": {
+    "sass": "^1.53.0"
+  }
+}
