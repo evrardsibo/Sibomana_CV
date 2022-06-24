@@ -35,14 +35,6 @@ img {
   max-width: 100%;
 }
 
-.mb-5 {
-  margin-bottom: 5rem !important;
-}
-
-.mb-2 {
-  margin-bottom: 2rem !important;
-}
-
 .title-small {
   letter-spacing: 0.5rem;
   font-size: 1.7rem;
@@ -55,16 +47,51 @@ img {
   color: var(--hint);
 }
 
+.mb-5 {
+  margin-bottom: 5rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 2rem !important;
+}
+
+@keyframes bounce {
+  0% {
+    transform: rotate(-45deg);
+  }
+  10% {
+    transform: rotate(-35deg);
+  }
+  70% {
+    transform: rotate(20deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+  90% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .grid-container {
   display: grid;
-  grid: "picture header" auto "aside main" 1fr "footer footer" auto/350px auto;
   min-height: 100vh;
+  grid: "picture header" auto "aside main" 1fr "footer footer" auto/350px auto;
+  /* Landscape phones and down */
+}
+@media (max-width: 480px) {
+  .grid-container {
+    grid: "header" auto " main" auto "picture " auto "aside" auto "footer" auto/auto;
+  }
 }
 
 header {
   grid-area: header;
   background: linear-gradient(to right, var(--primary), var(--light));
   padding: 8rem 5rem;
+  /* Landscape phones and down */
   text-align: center;
   color: white;
   display: flex;
@@ -72,14 +99,24 @@ header {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 480px) {
+  header {
+    padding: 5rem 2rem;
+  }
+}
 header h1 {
   font-size: 6rem;
+  /* Landscape phones and down */
   line-height: 8rem;
   font-weight: 300;
   letter-spacing: 3rem;
 }
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 4rem;
+  }
+}
 header p {
-  font-size: 2rem;
   letter-spacing: 0.5rem;
 }
 header span {
@@ -177,17 +214,23 @@ aside .block .social-container p {
 main {
   grid-area: main;
   padding: 5rem;
+  /* Landscape phones and down */
+}
+@media (max-width: 480px) {
+  main {
+    padding: 5rem 1.5rem;
+  }
 }
 main h2 {
   margin-bottom: 4rem;
 }
 main p {
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
   line-height: 3rem;
 }
 main .experience {
   display: flex;
-  margin: 2rem 0;
+  margin: 6rem 0;
 }
 main .experience .timeline {
   text-align: center;
@@ -213,6 +256,7 @@ main .experience .content ul {
 footer {
   grid-area: footer;
   padding: 3rem;
+  /* Landscape phones and down */
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -220,6 +264,11 @@ footer {
   align-items: center;
   color: white;
   background: var(--text);
+}
+@media (max-width: 480px) {
+  footer {
+    padding: 2rem 1.5rem;
+  }
 }
 footer h2 {
   margin-bottom: 3rem;
@@ -257,8 +306,14 @@ footer form input {
   outline: 0;
   border: 0;
   min-width: 400px;
+  /* Landscape phones and down */
   padding: 1rem 2rem;
   line-height: 2rem;
+}
+@media (max-width: 480px) {
+  footer form input {
+    min-width: 200px;
+  }
 }
 footer form input::placeholder {
   color: var(--text);
