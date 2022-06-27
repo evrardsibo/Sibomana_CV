@@ -247,6 +247,9 @@ main .experience .content {
 main .experience .content h3 {
   margin: 0;
 }
+main .experience .content p {
+  margin: 0;
+}
 main .experience .content ul {
   margin: 2rem 0;
   list-style: circle;
